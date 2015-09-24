@@ -24,7 +24,11 @@ inv <- NULL
 
 # This function assumes that the matrix is always invertible.
 cacheSolve <- function(x, ...) {
+    
+    # Returns the inverse matrix of 'x'
     inv <- x$getinverse()
+    
+    # Just return the inverse if its already set
     if(!is.null(inv)) {
         message("getting cached data.")
         return(inv)
